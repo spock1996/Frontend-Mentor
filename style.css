@@ -1,0 +1,721 @@
+@import url('https://fonts.google.com/specimen/Manrope');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+    background-color: hsl(230, 100%, 99%);
+}
+
+/* parent container settings */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.shape1 {
+    width: 100%;
+    text-align: center;
+   
+}
+
+.shape2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+    
+}
+
+
+/* Title settings */
+
+.title {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+
+.title h1 {
+	color: hsl(227, 35%, 25%);
+	font-size: 1.9rem;
+}
+
+.title p {
+    color: hsl(225, 20%, 60%);
+    font-size: 1rem;
+}
+
+
+/* Pricing section settings */
+
+.pricing-container {
+    width: 35.25rem;
+    height: 25.875rem;
+	position: absolute;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	padding-top: 20px;
+	transform: translate(-50%);
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.views-price {
+    display: flex;
+	justify-content: space-around;
+	
+	padding: 20px;
+	
+	align-items: center;
+	position: relative;
+	
+}
+
+
+.views-price h2 {
+    color: hsl(227, 35%, 25%);
+    font-size: 2rem;
+    display: flex;
+	align-items: center;
+	/*position: absolute;
+	right: 10%;
+	top: 10%;*/
+}
+
+.views-price p {
+    font-size: 1rem;
+    color: hsl(225, 20%, 60%);
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	/*position: absolute;
+	left: 10%;
+	top: 15%;*/
+    
+}
+
+
+.views-price .month {
+    font-size: 12px;
+    color: hsl(225, 20%, 60%);
+    margin-left: 3px;
+    letter-spacing: 1px;
+}
+
+
+
+
+/* some range settings */
+
+.range input {
+	
+    width: 80%;
+}
+
+
+/* discount-container settings */
+
+.discount-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: hsl(225, 20%, 60%); 
+	position: relative;
+}
+
+
+.discount {
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+.discount-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.discount-container input[type="checkbox"] {
+	height: 25px;
+	width: 45px;
+	border-radius: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color:hsl(224, 65%, 95%);
+	cursor: pointer;
+	text-align: center;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	position: relative;
+}
+
+.discount-container input[type="checkbox"]:checked {
+	background-color: hsl(174, 77%, 80%);
+}
+
+.discount-container input[type="checkbox"]:before {
+	content: '\2713';
+    display: block;
+	text-align: center;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	color:#fff;
+	background-color: #fff;
+	margin-left: 2px;
+    
+    
+}
+
+.discount-container input[type="checkbox"]:checked::before {
+	content: '\2713';
+	position: absolute;
+	right: 0;
+	margin-right: 2px;
+   
+    
+    
+}
+
+
+.discount-container input[type="checkbox"]:active {
+    border: 2px solid #34495E;
+}
+
+
+
+
+
+
+/* features container settings */
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+	border-top: 1px solid hsl(174, 77%, 80%);
+	color: hsl(225, 20%, 60%);
+}
+
+
+.features {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.features-container .btn {
+    background-color: hsl(227, 35%, 25%);
+    color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+	padding-right: 20px;
+	width: 30%;
+    border-color: #28a745;
+    border-radius: 2rem;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.features-container .btn:hover {
+	outline: none;
+	background-color: hsl(228, 45%, 23%);
+}
+
+
+
+/* Dispabled check box */
+.b-contain *, .b-contain *::before, .b-contain *::after {
+	box-sizing: content-box !important;
+}
+
+.b-contain input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.b-contain span {
+	line-height: 1.54;
+	font-size: 1rem;
+	font-family: inherit;
+}
+
+.b-contain {
+	display: table;
+	position: relative;
+	padding-left: 1.8rem;
+	cursor: pointer;
+	margin-bottom: .5rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.25rem;
+	width: 1.25rem;
+	background: rgba(241, 245, 248, 1);
+	transition: background 250ms;
+	border: none;
+	border-radius: 0rem;
+}
+
+.b-contain input[type="radio"] ~ .b-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.25rem;
+	width: 1.25rem;
+	background: rgba(241, 245, 248, 1);
+	transition: background 250ms;
+	border: none;
+	border-radius: 2.0rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input::after {
+	content: '';
+	position: absolute;
+	display: none;
+	left: .45rem;
+	top: .18rem;
+	width: .25rem;
+	height: .6rem;
+	border: solid hsl(174, 86%, 45%);
+	border-width: 0 2px 2px 0;
+	transition: background 250ms;
+	transform: rotate(45deg);
+}
+
+.b-contain input[type="radio"] ~ .b-input::after {
+	content: '';
+	position: absolute;
+	display: none;
+	left: .25rem;
+	top: .25rem;
+	width: .75rem;
+	height: .75rem;
+	border-radius: 2.0rem;
+	background-image: linear-gradient(to );
+	transition: background 250ms;
+}
+
+.b-contain input:disabled ~ .b-input::after {
+	border-color: hsl(174, 86%, 45%);
+}
+
+.b-contain input:checked ~ .b-input::after {
+	display: block;
+}
+
+.b-contain:hover input ~ .b-input,
+.b-contain input:focus ~ .b-input {
+	background: rgba(255, 255, 255, 1);
+}
+
+.b-contain input:focus ~ .b-input {
+	box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+}
+
+.b-contain input:checked ~ .b-input {
+	background: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+}
+
+.b-contain input[type="checkbox"]:disabled ~ .b-input {
+	background: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+	opacity: 1;
+	cursor: context-menu;
+}
+
+.b-contain input[type="radio"]:disabled ~ .b-input {
+	background: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+	opacity: 1;
+	cursor: context-menu;
+	
+}
+
+
+
+.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {
+	background: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+}
+
+.b-contain .b-input::before {
+	content: '';
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3rem;
+	height: 3rem;
+	margin-left: -0.85rem;
+	margin-top: -0.85rem;
+	background: rgba(0, 130, 243, 1);
+	border-radius: 2rem;
+	opacity: .6;
+	z-index: 99999;
+	transform: scale(0);
+	cursor: context-menu;
+}
+
+@keyframes b-ripple {
+	0% {
+		transform: scale(0);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1);
+  	}
+}
+
+@keyframes b-ripple-duplicate {
+	0% {
+		transform: scale(0);
+	}
+
+	30% {
+		transform: scale(1);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1);
+  	}
+}
+
+.b-contain input + .b-input::before {
+	animation: b-ripple 250ms ease-out;
+}
+
+.b-contain input:checked + .b-input::before {
+	animation-name: b-ripple-duplicate;
+}
+
+.b-contain .b-input::before {
+	visibility: hidden;
+}
+
+.b-contain input:focus + .b-input::before {
+	visibility: visible;
+}
+
+.b-contain:first-child .b-input::before {
+	visibility: hidden;
+}
+
+.b-contain span {
+	cursor: context-menu;
+}
+
+#discount-input:hover {
+	cursor: pointer;
+	
+}
+
+
+
+
+  
+/* Range */
+
+input[type=range] {
+	width: 80%;
+	margin: 9.55px 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+
+input[type=range] {
+	position: absolute;
+	top: 80%;
+	
+}
+
+
+
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	background: hsl(174, 77%, 80%);
+	border: hsl(174, 77%, 80%);
+	border-radius: 6.4px;
+	width: 80%;
+	height: 11.9px;
+	cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+	margin-top: -9.75px;
+	width: 31px;
+	height: 31px;
+	background: hsl(174, 86%, 45%);
+	border: 0;
+	border-radius: 16px;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+  input[type=range]:focus::-webkit-slider-runnable-track {
+	background-image: linear-gradient(to );
+  }
+input[type=range]::-moz-range-track {
+	background-image: linear-gradient(to );
+	border: 0.2px solid #010101;
+	border-radius: 6.4px;
+	width: 80%;
+	height: 11.9px;
+	cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+	width: 31px;
+	height: 31px;
+	background: hsl(223, 50%, 87%);
+	border: 0;
+	border-radius: 16px;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	background: transparent;
+	border-color: transparent;
+	border-width: 24.55px 0;
+	color: transparent;
+	width: 80%;
+	height: 11.9px;
+	cursor: pointer;
+}
+  input[type=range]::-ms-fill-lower {
+	background-image: linear-gradient(to );
+	border: 0.2px solid #010101;
+	border-radius: 12.8px;
+  }
+  input[type=range]::-ms-fill-upper {
+	background-image: linear-gradient(to );
+	border: 0.2px solid #010101;
+	border-radius: 12.8px;
+  }
+input[type=range]::-ms-thumb {
+	width: 31px;
+	height: 31px;
+	background: #581c2b;
+	border: 0;
+	border-radius: 16px;
+	cursor: pointer;
+	margin-top: 0px;
+	/*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+	background-image: linear-gradient(to );
+}
+input[type=range]:focus::-ms-fill-upper {
+	background-image: linear-gradient(to );
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+input[type=range] {
+	  margin: 0;
+	/*Edge starts the margin from the thumb, not the track as other browsers do*/
+}
+}
+
+
+
+
+
+/* mobile settings */
+
+@media only screen and (max-width: 1000px) {
+	.pricing-container {
+		width: 25.25rem;
+		height: 32.875rem;
+		
+		
+	}
+	.features-container {
+		flex-direction: column;
+		
+	}
+	.features-container .btn {
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 50%;
+		margin-top: 30px;
+	}
+	input[type=range] {
+		position: relative;
+		
+	}
+	.views-price {
+		flex-direction: column;
+	}
+
+	.views-price h2 {
+		margin-top: 2rem;
+	}
+
+	.views-price p {
+		margin-bottom: 2rem;
+	}
+	.pricing-container {
+		top: 50%;
+	}
+
+	.shape2 {
+		top: 10%;	
+		
+	}
+	
+	/* Title settings */
+	
+	.title {
+		top: 20%;	
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.pricing-container {
+		width: 25.25rem;
+		height: 33.875rem;
+		
+		
+	}
+	.features-container {
+		flex-direction: column;
+		
+	}
+	.features-container .btn {
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 50%;
+		margin-top: 30px;
+	}
+	input[type=range] {
+		position: relative;
+		
+	}
+	.views-price {
+		flex-direction: column;
+	}
+
+	.views-price h2 {
+		margin-top: 1.5rem;
+	}
+
+	.views-price p {
+		margin-bottom: 1.5rem;
+	}
+	.pricing-container {
+		top: 45%;
+	}
+
+	.shape2 {
+		top: 7%;	
+		
+	}
+	
+	/* Title settings */
+	
+	.title {
+		top: 10%;	
+	}
+
+	.title h1 {
+		font-size: 1.5rem;
+	}
+	
+}
+
+
+@media only screen and (max-width: 400px) {
+	body {
+		overflow-y: hidden;
+	}
+	.shape1 {
+		width: 111%;
+		text-align: center;  
+	}
+	.pricing-container {
+		width: 20.25rem;
+		height: 30.875rem;
+		top: 36%;	
+	}
+
+	.shape2 {
+		top: 3%;	
+		
+	}
+	
+
+	.title h1 {
+		font-size: 1.2rem;
+	}
+	.title p {
+		font-size: 0.95rem;
+	}
+
+	.features-container .btn {
+		margin-top: 15px;
+		padding-bottom: 10px;
+	}
+
+	.views-price h2 {
+		margin-top: 1rem;
+	}
+
+	.views-price p {
+		margin-bottom: 1rem;
+	}
+
+
+}
